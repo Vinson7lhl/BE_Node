@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {{block 'title'}}{{/block}}
+    </title>
+    <!--基础css-->
+    <link rel="stylesheet" href="../static/stylesheets/base.css">
+    {{block 'css'}}{{/block}}
+</head>
+
+<body>
+    <!--内容-->
+    {{block 'content'}}骨架内容{{/block}}
+
+
+    <!--footer-->
+    {{include './comp/footer.html'}}
+
+    <!--基础js-->
+    <script src="../static/javascripts/base.js"></script>
+    {{block 'js'}}{{/block}}
+</body>
+
+</html>

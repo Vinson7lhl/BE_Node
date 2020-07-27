@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="en">
+        <title>首页</title>
+        <link rel="stylesheet" type="text/css" href="/static_files/css/index.css">
+    </head>
+    <body>
+        中原高手:
+        <table>
+            {{each user_list}}
+            <tr>
+                <td class='masterList'>{{$index}} </td>
+                <td class='masterList'>{{$value.name}}</td>
+                <td class='masterList'>{{$value.tech}}</td>
+            </tr>
+            {{/each}}
+            <img src="/static_files/img/404.jpg" alt="">
+        </table>
+    <script src='/static_files/js/fe_index.js'></script>
+    </body>
+</html>

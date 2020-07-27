@@ -1,0 +1,40 @@
+{{extend './layout.html'}}
+
+
+{{block 'title'}}
+    {{title}}
+{{/block}}
+
+{{block 'css'}}
+    <link rel="stylesheet" href="../static/stylesheets/index.css">
+{{/block}}
+
+
+
+
+
+
+{{block 'content'}}
+    ---{{content}}---<br />
+    <table>
+        <thead>中原高手列表</thead>
+        <tbody>
+            {{each data_list}}
+            <tr>
+                <td>{{$value.id}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.age}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/block}}
+
+
+
+
+
+
+{{block 'js'}}
+    <script src="../static/javascripts/index.js"></script>
+{{/block}}

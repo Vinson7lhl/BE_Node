@@ -1,0 +1,21 @@
+/*
+    基本css样式
+*/
+body, div, p, h1, h2, h3, h4, h5, h6, section, article, ul, li {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body {
+  background-color: cornflowerblue;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.footer{
+  line-height:100px;
+  text-align: center;
+  background-color: darkgoldenrod;
+}

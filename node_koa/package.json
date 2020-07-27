@@ -1,0 +1,15 @@
+{
+  "name": "node_koa",
+  "version": "1.0.0",
+  "description": "It's a Koa application test",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "lihonglei",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^8.0.8"
+  }
+}
