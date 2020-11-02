@@ -4,7 +4,7 @@
   "description": "It's a Koa application test",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "dev": "node main.js"
   },
   "author": "lihonglei",
   "license": "ISC",
