@@ -20,7 +20,7 @@ const body_parser = require('body-parser')
 
 /**
  * 对静态资源处理，如此才可以访问 localhost:3000/(static/stylesheets/style.css)
- * app.use('映射名',实际路径)
+ * app.use('映射名',实际路径)，第一个参数可以不传，那么就可以直接访问访问 'http://localhost:3000/stylesheets/base.css'
  */
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
