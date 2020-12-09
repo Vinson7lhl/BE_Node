@@ -8,9 +8,9 @@ const path = require('path')
 const fs = require('fs')
 
 
-// 1、获取模板模块,第一个参数确定模板扩展名
+// 1、获取模板模块,第一个参数确定模板扩展名,第二个是模板模块
 app.engine('html', require('express-art-template'))
-// 2、第二个是模板模块.注意：views文件夹是art-template约定的，模板必须放在此处 or 其子文件夹,但也可以改修改默认模板路径views => pages,app.set('views', '你要的路径')
+// 2、更改模板文件映射目录；views文件夹是art-template约定的，模板必须放在此处 or 其子文件夹,但也可以改修改默认模板路径views => pages,app.set('views', '你要的路径')
 app.set('views', path.join(__dirname, 'pages'))
 
 
