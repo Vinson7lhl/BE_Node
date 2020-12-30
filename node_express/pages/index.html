@@ -19,11 +19,12 @@
     <table>
         <thead>中原高手列表</thead>
         <tbody>
-            {{each data_list}}
+            {{each data_list item key}}
             <tr>
-                <td>{{$value.id}}</td>
-                <td>{{$value.name}}</td>
-                <td>{{$value.age}}</td>
+                <td>第{{ key + 1 }}个高手 --- </td>
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.age }}</td>
             </tr>
             {{/each}}
         </tbody>
