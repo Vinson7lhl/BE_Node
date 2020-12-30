@@ -13,12 +13,11 @@
 
 <body>
     <!--内容-->
-    {{block 'content'}}
-    {{/block}}
+    {{block 'content'}}{{/block}}
 
 
     <!--footer-->
-    {{include './comp/footer.html'}}
+    {{ block 'footer' }}{{ /block }}
 
     <!--基础js-->
     <script src="../static/javascripts/base.js"></script>

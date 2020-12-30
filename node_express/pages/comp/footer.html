@@ -1,3 +1,5 @@
 <div class='footer'>
-    {{ footer_str }}
+    {{ each $data item key}}
+    <span>{{item}}</span>
+    {{ /each }}
 </div>

@@ -5,13 +5,10 @@
     {{title}}
 {{/block}}
 
+
 {{block 'css'}}
     <link rel="stylesheet" href="../static/stylesheets/index.css">
 {{/block}}
-
-
-
-
 
 
 {{block 'content'}}
@@ -32,9 +29,9 @@
 {{/block}}
 
 
-
-
-
+{{ block 'footer' }}
+    {{include './comp/footer.html' footer_str_array}}
+{{ /block }}
 
 {{block 'js'}}
     <script src="../static/javascripts/index.js"></script>

@@ -45,7 +45,7 @@ app.get('/',(req,res) => {
 			title: '模板继承',
 			content1: '继承内容',
 			data_list: JSON.parse(data).data_list,
-			footer_str: '这里是footer内容'
+			footer_str_array: ['foot1', 'foot2', 'foot3']
 		})
 	})
 
