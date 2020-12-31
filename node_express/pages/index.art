@@ -1,4 +1,4 @@
-{{extend './layout.html'}}
+{{extend './layout.art'}}
 
 
 {{block 'title'}}
@@ -30,7 +30,7 @@
 
 
 {{ block 'footer' }}
-    {{include './comp/footer.html' footer_str_array}}
+    {{include './comp/footer.art' footer_str_array}}
 {{ /block }}
 
 {{block 'js'}}
