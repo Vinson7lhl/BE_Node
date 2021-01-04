@@ -6,14 +6,14 @@ const app = express()
 const path = require('path')
 // 获取文件对象
 const fs = require('fs')
+// 获取模板
+const exphbs  = require('express-handlebars');
 
-/**
- * 配置模板对象
- * 1、获取模板模块,第一个参数确定模板扩展名,第二个是模板模块
- * 2、更改模板文件映射目录；views文件夹是art-template约定的，模板必须放在此处 or 其子文件夹,但也可以改修改默认模板路径views => pages,app.set('views', '你要的路径')
- */
-app.engine('art', require('express-art-template'))
+// 获取模板模块,第一个参数确定模板扩展名,第二个是模板模块
+app.engine('hbs', exphbs())
+// 更改模板文件映射目录：默认为views，修改为pages，pages,app.set('views', '你要的路径')
 app.set('views', path.join(__dirname, 'pages'))
+app.set('view engine', 'hbs');
 
 /**
  * 获取post请求后数据插件？暂时未用
@@ -41,7 +41,7 @@ app.get('/',(req,res) => {
 		if (err) {
 			return res.status(500).send('服务器错误！')
 		}
-		res.render('index.art', {
+		res.render('index.hbs', {
 			title: '模板继承',
 			content1: '继承内容',
 			data_list: JSON.parse(data).data_list,
