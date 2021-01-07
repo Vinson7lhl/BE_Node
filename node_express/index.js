@@ -10,7 +10,11 @@ const fs = require('fs')
 const exphbs  = require('express-handlebars');
 
 // 获取模板模块,第一个参数确定模板扩展名,第二个是模板模块
-app.engine('hbs', exphbs())
+app.engine('hbs', exphbs({
+	layoutsDir: "pages/layouts/",
+    defaultLayout: 'base_layout.hbs',
+    extname: '.hbs'
+}))
 // 更改模板文件映射目录：默认为views，修改为pages，pages,app.set('views', '你要的路径')
 app.set('views', path.join(__dirname, 'pages'))
 app.set('view engine', 'hbs');
@@ -30,6 +34,7 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
  * 路由
  */
 app.get('/',(req,res) => {
+	console.log('请求参数：', req)
 	/**
 	 * q1：如何连接数据库
 	 * q2：如何查询请求中的参数
@@ -41,11 +46,12 @@ app.get('/',(req,res) => {
 		if (err) {
 			return res.status(500).send('服务器错误！')
 		}
-		res.render('index.hbs', {
+		res.render('index', {
 			title: '模板继承',
 			content1: '继承内容',
 			data_list: JSON.parse(data).data_list,
-			footer_str_array: ['foot1', 'foot2', 'foot3']
+			footer_str_array: ['foot1', 'foot2', 'foot3'],
+			layout: "base_layout"
 		})
 	})
 
