@@ -1,27 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-{{ ! 基本架构模板 }}
-<head>
-    <meta charset="utf-8">
-    <title>
-        {{block 'title'}}{{/block}}
-    </title>
-    <!--基础css-->
-    <link rel="stylesheet" href="../static/stylesheets/base.css">
-    {{block 'css'}}{{/block}}
-</head>
-
-<body>
-    <!--内容-->
-    {{block 'content'}}{{/block}}
-
-
-    <!--footer-->
-    {{ block 'footer' }}{{ /block }}
-
-    <!--基础js-->
-    <script src="../static/javascripts/base.js"></script>
-    {{block 'js'}}{{/block}}
-</body>
-
+    <title>{{ title }}</title>
+    <head>
+        handlerbar
+    </head>
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <div class="content-wrapper">
+                {{{body}}}
+            </div>
+        </div>
+    </body>
 </html>

@@ -1,4 +1,4 @@
-{{ ! 首页 }}
+{{!-- {{ ! 首页 }}
 
 {{block 'title'}}
     {{title}}
@@ -34,4 +34,16 @@
 
 {{block 'js'}}
     <script src="../static/javascripts/index.js"></script>
-{{/block}}
+{{/block}} --}}
+
+
+<div class="content">
+    {{ content }}
+    <div>武林高手列表</div>
+    <div>
+        {{#each data_list}}
+            <h3>{{this.id}} - {{this.name}} - {{this.age}}岁</h3>
+        {{/each}}
+        {{gender}}
+    </div>
+</div>

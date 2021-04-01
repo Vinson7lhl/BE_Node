@@ -1,3 +1,8 @@
+/* ------------------------------------------------------------------------------
+
+获取模块
+
+------------------------------------------------------------------------------ */
 // 获取express模块
 const express = require('express')
 // 创建服务对象
@@ -7,8 +12,21 @@ const path = require('path')
 // 获取文件对象
 const fs = require('fs')
 // 获取模板
-const exphbs  = require('express-handlebars');
+const exphbs  = require('express-handlebars')
+// 获取layout
+// const layouts = require('handlebars-layouts')
 
+
+
+
+/* ------------------------------------------------------------------------------
+
+设置默认扩展等
+
+------------------------------------------------------------------------------ */
+// exphbs.registerHelper(layouts(exphbs));
+// 绑定layout到handlerbar
+// layouts.register(exphbs)
 // 获取模板模块,第一个参数确定模板扩展名,第二个是模板模块
 app.engine('hbs', exphbs({
 	layoutsDir: "pages/layouts/",
@@ -22,7 +40,7 @@ app.set('view engine', 'hbs');
 /**
  * 获取post请求后数据插件？暂时未用
  */
-const body_parser = require('body-parser')
+// const body_parser = require('body-parser')
 
 /**
  * 对静态资源处理，如此才可以访问 localhost:3000/(static/stylesheets/style.css)
@@ -47,16 +65,18 @@ app.get('/',(req,res) => {
 			return res.status(500).send('服务器错误！')
 		}
 		res.render('index', {
-			title: '模板继承',
-			content1: '继承内容',
+			title: '老七的Express',
+			head: '这里是handlerbar',
+			content: '继承内容',
+			content_detail: {
+				gender: '男',
+				age:33,
+				prefer: 'javascript',
+			},
 			data_list: JSON.parse(data).data_list,
-			footer_str_array: ['foot1', 'foot2', 'foot3'],
-			layout: "base_layout"
+			footer_str_array: ['foot1', 'foot2', 'foot3']
 		})
 	})
-
-	
-    // res.send('hello Express！哈哈哈')
 })
 
 app.post('/', function (req, res) {
