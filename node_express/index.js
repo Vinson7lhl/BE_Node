@@ -54,7 +54,6 @@ APP.use('/static', EXPRESS.static(PATH.join(__dirname, 'public')))
  * 路由
  */
 APP.get('/',(req,res) => {
-	console.log('请求参数：', req)
 	/**
 	 * q1：如何连接数据库
 	 * q2：如何查询请求中的参数
