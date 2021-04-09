@@ -15,6 +15,8 @@ const FS = require('fs')
 const EXPHBS  = require('express-handlebars')
 // 获取Helper
 const HELPERS = require('./helpers/helpers')
+// 获取body-parser（处理post请求中的body）
+const BODYPARSER = require('body-parser')
 
 
 
@@ -40,9 +42,9 @@ APP.set('view engine', 'hbs');
 
 
 /**
- * 获取post请求后数据插件？暂时未用
+ * 将中间件body-parser注入
  */
-// const body_parser = require('body-parser')
+ APP.use(BODYPARSER.json())
 
 /**
  * 对静态资源处理，如此才可以访问 localhost:3000/(static/stylesheets/style.css)
@@ -82,6 +84,11 @@ APP.get('/',(req,res) => {
 
 APP.post('/', function (req, res) {
 	res.send('Post 请求')
+	// 获取body数据
+	console.log(req.body)
+})
+
+APP.post('/login', function (req, res) {
 	// 获取body数据
 	console.log(req.body)
 })
