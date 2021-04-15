@@ -3,8 +3,20 @@
     <div>武林高手列表</div>
     <div>
         {{#each data_list}}
-            <h3>{{id}} - {{name}} - {{age}}岁 - 英文名：{{UPP e_name }}</h3>
+        <h3>{{id}} - {{name}} - {{age}}岁 - 英文名：{{UPP e_name }}</h3>
         {{/each}}
         {{gender}}
     </div>
+    虚假表单：
+    <form class='formGroup' method='post' action='/post/newer'>
+        <div class="form-group">
+            <label for="user_name">姓名</label>
+            <input type="text" class="form-control" id="user_name" name='user_name' placeholder="请输入姓名">
+        </div>
+        <div class="form-group">
+            <label for="user_age">年龄</label>
+            <input type="text" class="form-control" id="user_age" name='user_age' placeholder="请输入年龄">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 </div>

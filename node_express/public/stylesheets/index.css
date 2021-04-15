@@ -1,5 +1,12 @@
+body{
+  font-size:12px;
+  margin:0;
+  padding:0;
+}
 
-body {
-  font-size: 22px;
-  font-weight: bold;
+.content{
+  padding:10px;
+}
+.formGroup{
+  width:200px;
 }
