@@ -31,6 +31,7 @@ let img_type = ['jpg','jpeg','png','gif']
 
 // 创建服务器对象
 const SERVER = HTTP.createServer()
+// 创建服务对象的监听
 SERVER.on('request', (req, res) => {
     console.log('请求来了！')
     // 这个url是指端口号之后的所有字符串 比如访问：http://localhost:3000，实际为：http://localhost:3000/
@@ -85,6 +86,7 @@ SERVER.on('request', (req, res) => {
 
 })
 // 启动服务，通过控制台 node index.js 启动，此处用3000端口，但可以用80端口，默认浏览器端口，这样就可以不用写localhost:3000
+// 端口范围为：0~65535（64位系统）
 SERVER.listen(3000, () => {
     console.log('启动服务')
 })
