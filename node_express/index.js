@@ -105,7 +105,7 @@ APP.delete('/user', function (req, res) {
  * 设定端口
  * 启动服务
  */
-const PORT = 3000
+const PORT = 3001
 APP.listen(PORT, () => {
     console.log(`这是node-express 在监听${PORT}端口`)
 })
