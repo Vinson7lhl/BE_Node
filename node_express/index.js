@@ -15,7 +15,7 @@ const FS = require('fs')
 const EXPHBS  = require('express-handlebars')
 // 获取Helper
 const HELPERS = require('./helpers/helpers')
-// 获取body-parser（处理post请求中的body）
+// 获取body-parser（处理post请求中的body），因为在express4.16之后内置了中间件，所以不必再引入外部的中间价了
 // const BODYPARSER = require('body-parser')
 // 获取路由组件
 const ROUTER_INDEX = require('./routes/index')
