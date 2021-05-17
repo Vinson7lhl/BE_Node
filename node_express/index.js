@@ -16,7 +16,7 @@ const EXPHBS  = require('express-handlebars')
 // 获取Helper
 const HELPERS = require('./helpers/helpers')
 // 获取body-parser（处理post请求中的body）
-const BODYPARSER = require('body-parser')
+// const BODYPARSER = require('body-parser')
 // 获取路由组件
 const ROUTER_INDEX = require('./routes/index')
 const ROUTERS_USER = require('./routes/users')
@@ -46,8 +46,14 @@ APP.set('view engine', 'hbs');
 
 /**
  * 将中间件body-parser注入
+ * bodyParser.json():解析JSON格式
+ * bodyParser.urlencoded():解析文本格式
+ * bodyParser.raw():解析二进制格式
+ * bodyParser.text():解析文本格式
+ * 
  */
- APP.use(BODYPARSER.json())
+ APP.use(EXPRESS.json())
+ APP.use(EXPRESS.urlencoded({extended: false}))
 
 /**
  * 对静态资源处理，如此才可以访问 localhost:3000/(static/stylesheets/style.css)

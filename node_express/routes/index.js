@@ -13,7 +13,7 @@ ROUTER.get('/', function (req, res, next) {
 	 * q4：如何整合多个模块，比如路由拆分
 	 * tips：因为data是从文件读取的的字符串所以还要转化为对象
 	 */
-	FS.readFile('public/fake_data/fake_data.json', (err, data) => {
+	FS.readFile('DB/fake_data.json', (err, data) => {
 		if (err) {
 			return res.status(500).send('服务器错误！')
 		}
@@ -51,4 +51,4 @@ ROUTER.delete('/user', function (req, res) {
 	res.send('Delete 请求')
 })
 
-module.exports = ROUTER;
+module.exports = ROUTER
