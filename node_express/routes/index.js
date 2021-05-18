@@ -3,6 +3,8 @@ const EXPRESS = require('express')
 const FS = require('fs')
 // 获取路由
 const ROUTER = EXPRESS.Router()
+// 获取数据控制器
+const DATA_CTRL = require('../DB/ctrl_db.js')
 
 /* GET home page. */
 ROUTER.get('/', function (req, res, next) {
@@ -38,9 +40,15 @@ ROUTER.post('/', function (req, res) {
 	console.log(req.body)
 })
 
-ROUTER.post('/login', function (req, res) {
+ROUTER.post('/new_user', function (req, res) {
 	// 获取body数据
 	console.log(req.body)
+	DATA_CTRL.add(req.body.name, req.body.age, req.body.e_name, (err) => {
+		if(!err) {
+			console.log('// 添加成功 //')
+			res.redirect('/')
+		} 
+	})
 })
 
 ROUTER.put('/user', function (req, res) {

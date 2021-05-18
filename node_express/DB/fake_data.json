@@ -1,9 +1,1 @@
-{
-    "data_list": [
-        {"id": 1,"name": "东邪", "age": 62, "e_name": "east"},
-        {"id": 2,"name": "西毒", "age": 64,"e_name": "west"},
-        {"id": 3,"name": "南帝", "age": 71,"e_name": "south"},
-        {"id": 4,"name": "北丐", "age": 66,"e_name": "north"},
-        {"id": 5,"name": "中神通", "age": 54,"e_name": "middle"}
-    ]
-}
+{"data_list":[{"id":1,"name":"东邪","age":62,"e_name":"east"},{"id":2,"name":"西毒","age":64,"e_name":"west"},{"id":3,"name":"南帝","age":71,"e_name":"south"},{"id":4,"name":"北丐","age":66,"e_name":"north"},{"id":5,"name":"中神通","age":54,"e_name":"middle"},{"id":6,"name":"苹果","age":"23","e_name":"apple"},{"id":7,"name":"苹果","age":"23","e_name":"apple"},{"id":8,"name":"梨","age":"12","e_name":"pare"},{"id":9,"name":"香蕉","age":"14","e_name":"banana"}]}

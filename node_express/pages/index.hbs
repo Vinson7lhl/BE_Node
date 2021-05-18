@@ -8,14 +8,18 @@
         {{gender}}
     </div>
     虚假表单：
-    <form class='formGroup' method='post' action='/post/newer'>
+    <form class='formGroup' method='post' action='/new_user'>
         <div class="form-group">
-            <label for="user_name">姓名</label>
-            <input type="text" class="form-control" id="user_name" name='user_name' placeholder="请输入姓名">
+            <label for="name">姓名</label>
+            <input type="text" class="form-control" id="name" name='name' placeholder="请输入姓名">
         </div>
         <div class="form-group">
-            <label for="user_age">年龄</label>
-            <input type="text" class="form-control" id="user_age" name='user_age' placeholder="请输入年龄">
+            <label for="age">年龄</label>
+            <input type="text" class="form-control" id="age" name='age' placeholder="请输入年龄">
+        </div>
+        <div class="form-group">
+            <label for="e_name">英文名</label>
+            <input type="text" class="form-control" id="e_name" name='e_name' placeholder="请输入英文名">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
